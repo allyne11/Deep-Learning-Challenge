@@ -1,13 +1,13 @@
 ### Deep-Learning-Challenge
 
-# 🏆 Charity Donation Success Prediction  
+#  Charity Donation Success Prediction  
 
-## 📌 Overview  
+##  Overview  
 This project builds and trains a **deep learning model** using **TensorFlow** to predict charity donation success. The dataset is preprocessed, categorical variables are encoded, and a **neural network (DNN)** is trained for classification.
 
 ---
 
-## 🚀 Quick Start (Google Colab)  
+##  Quick Start (Google Colab)  
 1. Open **[Google Colab](https://colab.research.google.com/)**  
 2. Run:  
    ```python
@@ -18,29 +18,29 @@ This project builds and trains a **deep learning model** using **TensorFlow** to
 
 ---
 
-## 📊 Steps Covered  
+##  Steps Covered  
 
-### **1️⃣ Data Preprocessing**  
+### **1 Data Preprocessing**  
 - Dropped non-beneficial columns (`EIN`, `NAME`)  
 - Encoded categorical variables (`APPLICATION_TYPE`, `CLASSIFICATION`)  
 - Converted categorical data to numerical using `pd.get_dummies()`  
 - Split dataset into **training & testing sets**  
 
-### **2️⃣ Building & Training the Model**  
+### **2 Building & Training the Model**  
 - Defined a **sequential neural network** with:  
   - **Two hidden layers** (`ReLU` activation)  
   - **Output layer** (`Sigmoid` activation for binary classification)  
 - Compiled with `adam` optimizer & `binary_crossentropy` loss function  
 - Trained the model for **50 epochs**  
 
-### **3️⃣ Saving & Exporting the Model**  
+### **3 Saving & Exporting the Model**  
 - Saved as an **HDF5 file (`.h5`)** for future use  
 
 ---
 
-## 🔥 How to Run in Google Colab  
+## How to Run in Google Colab  
 
-### **1️⃣ Load & Preprocess Data**  
+### **1 Load & Preprocess Data**  
 ```python
 import pandas as pd
 import numpy as np
@@ -70,7 +70,7 @@ y_train = np.asarray(y_train).astype('int32')
 y_test = np.asarray(y_test).astype('int32')
 ```
 
-### **2️⃣ Define & Train the Model**  
+### **2 Define & Train the Model**  
 ```python
 # Define neural network
 nn = tf.keras.models.Sequential([
@@ -86,7 +86,7 @@ nn.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 history = nn.fit(X_train, y_train, epochs=50, batch_size=32, validation_data=(X_test, y_test))
 ```
 
-### **3️⃣ Save the Model**  
+### **3 Save the Model**  
 ```python
 nn.save("charity_optimization_model.h5")
 ```
@@ -97,15 +97,3 @@ nn.save("charity_optimization_model.h5")
 - **Optimize model performance** (Hyperparameter tuning)  
 - **Feature selection & engineering**  
 - **Deploy as an API or web app**  
-
----
-
-## 📧 Contact & Contributions  
-Feel free to contribute or reach out with suggestions!  
-📩 **Email**: your.email@example.com  
-💡 **GitHub**: [Your Repo Link]  
-
----
-
-### 🎉 Happy Coding & Machine Learning! 🚀
-
